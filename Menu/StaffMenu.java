@@ -18,7 +18,9 @@ public class StaffMenu extends UserMenu {
         enquiryMenu = new StaffEnquiryMenu(allCamp, CommentType.COMMENTTYPES.ENQUIRY);
         reportMenu = new ReportMenu(user, allUser, allCamp);
     }
-
+    /**
+     * Displays the main menu for staff members and handles user input to perform various actions.
+     */
     public void mainMenu() {
         StaffSuggestionMenu suggestionMenu = new StaffSuggestionMenu(allCamp, CommentType.COMMENTTYPES.SUGGESTION);
         StaffEnquiryMenu enquiryMenu = new StaffEnquiryMenu(allCamp, CommentType.COMMENTTYPES.ENQUIRY);

@@ -11,12 +11,24 @@ import Users.User;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.*;
-
+/**
+ * The `CampParticipantHandler` class is responsible for handling camp participation-related operations for students,
+ * including joining camps and withdrawing from camps. It provides methods to allow students to register for camps and
+ * withdraw from their registered camps.
+ */
 public class CampParticipantHandler extends CampBaseHandler {
+    /**
+     * Initializes a new instance of the `CampParticipantHandler` class with the specified `AllCamp` and `User` objects.
+     * @param allCamp The `AllCamp` object containing information about all camps.
+     * @param user    The `User` object representing the user interacting with camp participation operations.
+     */
     public CampParticipantHandler(AllCamp allCamp, User user) {
         super(allCamp, user);
     }
-
+    /**
+     * Allows a student to join a camp based on availability and registration deadlines. Students can choose to join
+     * as attendees or committee members if slots are available.
+     */
     public void joinCamp() {
         if (!(user instanceof Student)) {
             return;
@@ -47,7 +59,10 @@ public class CampParticipantHandler extends CampBaseHandler {
             System.out.println("Registration unsuccessful");
         }
     }
-
+    /**
+     * Allows a student to withdraw from a camp they have previously registered for as an attendee. Once withdrawn,
+     * they cannot join the same camp again.
+     */
     public void withdrawCamp() {
         if (!(user instanceof Student)) {
             return;

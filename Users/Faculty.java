@@ -1,12 +1,19 @@
 package Users;
 
 import java.io.Serializable;
-
+/**
+ * The `Faculty` class represents the various faculties at a university.
+ * It provides methods to get a faculty type based on faculty name or user choice.
+ */
 public class Faculty implements Serializable {
     public static enum FACULTY_TYPE {
         SCSE, EEE, SSS, NBS, CCEB, CEE, MSE, MAE, ADM, SOH, WKWSCI, SBS, SPMS, ASE, LKC, NIE, UNIVERSE
     };
-
+    /**
+     * Gets the faculty type based on a given faculty name.
+     * @param facultyName The name of the faculty.
+     * @return The corresponding faculty type, or null if the name is unrecognized.
+     */
     public static FACULTY_TYPE getFacultyType(String facultyName) {
         try {
             return FACULTY_TYPE.valueOf(facultyName.toUpperCase());
@@ -15,7 +22,11 @@ public class Faculty implements Serializable {
             return null;
         }
     }
-
+    /**
+     * Gets the faculty type based on a user's choice (integer).
+     * @param choice The user's choice (integer) representing a faculty.
+     * @return The corresponding faculty type, or null if the choice is invalid.
+     */
     public static Faculty.FACULTY_TYPE getFacultyFromChoice(int choice) {
         switch (choice) {
             case 1:

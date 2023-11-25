@@ -5,13 +5,23 @@ import Controller.*;
 import Menu.CampHandler.CampSelectionBuilder;
 import Program.MainProgram;
 import Users.*;
-
+/**
+ * The `ReportMenu` class provides a menu for generating various reports related to a selected camp.
+ * It allows both staff and students (committee members) to generate reports based on their roles and preferences.
+ */
 public class ReportMenu extends UserMenu {
-
+    /**
+     * Constructs a new `ReportMenu` instance with the specified user, all users, and all camps.
+     * @param user     The user for whom the report menu is created.
+     * @param allUser  The repository of all users in the system.
+     * @param allCamp  The repository of all camps in the system.
+     */
     public ReportMenu(User user, AllUser allUser, AllCamp allCamp) {
         super(user, allUser, allCamp);
     }
-
+    /**
+     * Displays the main menu for generating reports and handles user input to generate the selected report.
+     */
     public void mainMenu() {
         Camp selectedCamp = null;
 

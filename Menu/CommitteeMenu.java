@@ -9,12 +9,27 @@ import Menu.CommentHandler.StudentReplyEnquiry;
 import Menu.CommentHandler.StudentViewSuggestion;
 import Program.*;
 import Users.*;
-
+/**
+ * The `CommitteeMenu` class represents a menu for committee members (students) to interact with the system.
+ * It provides options for submitting, editing, and deleting suggestions, viewing suggestions, responding to enquiries,
+ * and generating reports.
+ */
 public class CommitteeMenu extends UserMenu {
+    /**
+     * Constructs a `CommitteeMenu` object.
+     * @param student  The student (committee member) for whom the menu is created.
+     * @param allUser  The collection of all users in the system.
+     * @param allCamp  The collection of all camps in the system.
+     */
     public CommitteeMenu(Student student, AllUser allUser, AllCamp allCamp) {
         super(student, allUser, allCamp);
-    }
-
+    }  
+    
+    /**
+     * Displays the main menu for committee members and handles user choices.
+     * The menu allows committee members to perform various actions such as submitting, editing, and deleting suggestions,
+     * viewing suggestions, responding to enquiries, and generating reports.
+     */
     public void mainMenu() {
         StudentSuggestionMenu suggestionMenu = new StudentSuggestionMenu(allCamp, CommentType.COMMENTTYPES.SUGGESTION);
         StudentEnquiryMenu enquiryMenu = new StudentEnquiryMenu(allCamp, CommentType.COMMENTTYPES.ENQUIRY);

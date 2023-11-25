@@ -1,7 +1,10 @@
 package Users;
 
 import java.io.Serializable;
-
+/**
+ * The `User` abstract class represents a user in the system.
+ * It serves as a base class for different user types, such as students and staff.
+ */
 public abstract class User implements Serializable {
     private Authentication authentication;
     private String name;

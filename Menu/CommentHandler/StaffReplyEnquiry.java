@@ -8,8 +8,17 @@ import Users.*;
 import Camp.Camp;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
+/**
+ * The `StaffReplyEnquiry` class implements the `IReplying` interface to provide functionality for staff members
+ * to reply to enquiries within a camp's comment section.
+ */
 public class StaffReplyEnquiry implements IReplying {
+    /**
+     * Allows a staff member to reply to an enquiry within a camp's comment section.
+     * @param user    The staff member who is replying to the enquiry.
+     * @param comment The enquiry comment being replied to.
+     * @param camp    The camp associated with the comment.
+     */
     public void replyComment(User user, Comment comment, Camp camp) {
         Staff staff = (Staff) user;
         Enquiry selectedEnquiry = (Enquiry) comment;

@@ -11,10 +11,17 @@ import Users.User;
 import Menu.CampHandler.CampSelectionBuilder;
 import Menu.CommentHandler.Interfaces.*;
 import Program.MainProgram;
-
+/**
+ * The `StaffSuggestionMenu` class represents a menu for staff members to manage and respond to suggestions within the Camp Management System.
+ * Staff members can view and approve (or reject) to suggestions associated with camps they are responsible for.
+ */
 public class StaffSuggestionMenu extends CommentMenu {
     private AllCamp allCamp;
-
+    /**
+     * Initializes a new instance of the StaffSuggestionMenu class with the specified parameters.
+     * @param allCamp     The AllCamp instance associated with this menu.
+     * @param commentType The type of comments (e.g., suggestion) handled by this menu.
+     */
     public StaffSuggestionMenu(AllCamp allCamp, CommentType.COMMENTTYPES commentType) {
         super(allCamp, commentType);
     }
@@ -22,7 +29,11 @@ public class StaffSuggestionMenu extends CommentMenu {
     public AllCamp getAllCamp() {
         return this.allCamp;
     }
-
+    /**
+     * Select a camp based on user input.
+     * @param user The user making the selection.
+     * @return The selected camp.
+     */
     public Camp selectCamp(User user) {
         Staff staff = (Staff) user;
         if (staff == null) {
@@ -30,7 +41,12 @@ public class StaffSuggestionMenu extends CommentMenu {
         }
         return CampSelectionBuilder.selectCamp(staff.getCampsCreated());
     }
-
+    /**
+     * Select a suggestion comment within a specific camp based on user input.
+     * @param camp The camp associated with the comments.
+     * @param user The user making the selection.
+     * @return The selected suggestion comment.
+     */
     protected Comment selectComment(Camp camp, User user) {
 
         if (camp == null) {
@@ -74,7 +90,11 @@ public class StaffSuggestionMenu extends CommentMenu {
 
         return targetComment;
     }
-
+    /**
+     * View comments associated with a camp using the provided viewer.
+     * @param staff  The staff member viewing the comments.
+     * @param viewer The viewer for displaying comments.
+     */
     public void viewComment(Staff staff, IViewing viewer) {
         Camp targetCamp = CampSelectionBuilder.selectCamp(staff.getCampsCreated());
         if (targetCamp == null) {
@@ -83,7 +103,10 @@ public class StaffSuggestionMenu extends CommentMenu {
         viewer.viewComment(staff, targetCamp);
         return;
     }
-
+    /* Reply to a suggestion comment using the provided replyer.
+    * @param staff   The staff member replying to the comment.
+    * @param replyer The replyer for responding to comments.
+    */
     public void replyComment(Staff staff, IReplying replyer) {
         if (staff == null) {
             return;

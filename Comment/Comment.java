@@ -4,6 +4,10 @@ import java.io.Serializable;
 import Camp.*;
 import Users.*;
 
+/**
+ * Represents an abstract Comment in a system involving Students and Camps.
+ * This class provides the basic structure and functionalities of a comment, including editing and querying its status. It is intended to be subclassed to provide more specific behaviors.
+ */
 public abstract class Comment implements Serializable {
     int commentId;
     Student student;

@@ -5,8 +5,17 @@ import Comment.Enquiry;
 import Menu.CommentHandler.Interfaces.IEditing;
 import Program.MainProgram;
 import Users.User;
-
+/**
+ * The `StudentEditEnquiry` class implements the `IEditing` interface and is responsible for editing an existing
+ * enquiry comment in the application. It allows students to edit their own enquiries as long as the enquiry has
+ * not been processed.
+ */
 public class StudentEditEnquiry implements IEditing {
+    /**
+     * Edits an enquiry comment if it has not been processed.
+     * @param user    The user attempting to edit the comment.
+     * @param comment The comment to be edited, which should be an enquiry.
+     */
     public void editComment(User user, Comment comment) {
         Enquiry enquiry = (Enquiry) comment;
         if (enquiry.getProcessed()) {

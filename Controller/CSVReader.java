@@ -7,7 +7,20 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * `ExcelReader` is a utility class for reading user data from a CSV (Comma-Separated Values) file
+ *  and converting it into a list of User objects.
+ */
+
 public class CSVReader {
+    /**
+     * Reads user data from a CSV file and returns a list of User objects.
+     *
+     * @param filepath The path to the CSV file.
+     * @param role     The role of the users to be created. 
+     * @return A list of User objects representing the data from the CSV file.
+     *         Returns null if there is an error reading the file.
+     */
     public static ArrayList<User> readCSV(String filepath, Roles.ROLES role) {
         try {
             ArrayList<User> allUsers = new ArrayList<>();

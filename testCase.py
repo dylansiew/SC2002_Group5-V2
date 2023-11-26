@@ -20,7 +20,7 @@ process = subprocess.Popen(['java', java_program_path], stdin=subprocess.PIPE, t
 prev = ""
 for line in inputs:
     process.stdin.write(line + '\n')
-    # time.sleep(1)
+    time.sleep(1)
     process.stdin.flush()
 
 process.stdin.close()

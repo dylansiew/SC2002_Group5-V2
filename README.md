@@ -27,7 +27,8 @@ python TestCase.py
 This script `TestCase.py` reads inputs from `Suggested_Inputs_For_Program_Testing.txt` and runs the Java program for each test case.
 
 ### [Test Cases](Suggested_Inputs_For_Program_Testing.txt)
-#### Staff A Workflow
+
+#### Staff A (ourin) 
 
 1. **Create NTU and SCSE but dates clash:**
    - Create NTU (Total Slots: 10, Comm Slots: 4) - date error.
@@ -46,8 +47,9 @@ This script `TestCase.py` reads inputs from `Suggested_Inputs_For_Program_Testin
    - Edit NTU camp date.
    - View the created camps.
 
+#### Student A (ychern) action 
 5. **Raise Enquiry and Suggestion:**
-   - Join NTU as Community Leader.
+   - Join NTU as committee member.
    - Join SCSE as Attendee but date clashes.
    - Raise an enquiry to SCSE - requesting a date change.
    - Raise an enquiry to NTU - FAIL (own camp).
@@ -55,7 +57,7 @@ This script `TestCase.py` reads inputs from `Suggested_Inputs_For_Program_Testin
    - Raise a 2nd suggestion to NTU - request halal food.
    - Edit the 2nd suggestion to NTU - rephrase the request politely for halal food.
    - Delete the halal suggestion (remembering staff assured halal food).
-   - Click slide.
+
 
 6. **Staff A Actions:**
    - View suggestion to NTU.
@@ -63,9 +65,9 @@ This script `TestCase.py` reads inputs from `Suggested_Inputs_For_Program_Testin
    - Edit NTU camp date.
    - View enquiry to SCSE.
    - Reply NO.
-   - Click slide.
+   - Try to delete NTU Ori but fail because already have students joined.
 
-#### Staff B Workflow
+#### Staff B (upam) Workflow
 
 7. **Create COE and Visibility:**
    - Create COE (Total Slots: 20, Comm Slots: 9) but named as SCSE - exceeds max comm - invisible.
@@ -81,30 +83,27 @@ This script `TestCase.py` reads inputs from `Suggested_Inputs_For_Program_Testin
    - View enquiry to SCSE.
    - Delete enquiry but FAIL (already processed).
    - Join SCSE as an Attendee.
-   - Click slide.
 
-#### Student B Workflow
+#### Student B (ct113) Workflow
 
 10. **Joining and Enquiry:**
-    - Join SCSE as a Community Leader (make comm full).
+    - Join SCSE as a committee member (make comm full).
     - Join NTU as an Attendee.
-    - Raise an enquiry to NTU - inquire about halal food?
+    - Raise an enquiry to NTU - enquire about halal food
 
-#### Student C Workflow
+#### Student C (dl007) Workflow
 
 11. **Joining and Quitting:**
-    - Join SCSE as a Community Leader but full, so join SCSE as an Attendee.
-    - Join COE and quit.
-    - Click slide.
-    - Join NTU as a Community Leader + reply.
+    - Join SCSE as a committee member but full, so join SCSE as an Attendee.
+    - Join COE and withdraw, then join again but fail.
+    - Join NTU as a committee member + reply.
     - Generate a report.
 
 #### Staff Actions
 
 12. **Staff Operations:**
-    - Generate NTU, SCSE report.
-    - Delete COE.
-    - If no time, delete the camp done by Staff A.
+    - Staff A Generate NTU report and delete NTU (but FAIL because already have students joined).
+    - Staff B delete COE (SUCCESS because no one joining).
 
 #### Note
    - "Total Slots:Comm Slots" format indicates the camp's capacity and the number of slots allocated for Community Leaders.

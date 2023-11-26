@@ -1,17 +1,33 @@
 # SC2002_Group5-V2
 
-### Compile code from the root directory
+
+# SC2002_Group5-V2
+
+## Overview
+This README provides instructions for compiling and testing the Java program for SC2002_Group5-V2.
+
+## Compilation Instructions
+To compile the code, navigate to the root directory and execute the following commands in the terminal:
+
 ```bash
 javac Camp/*.java Comment/*.java Controller/*.java Menu/*.java Program/*.java Users/*.java Menu/CampHandlers/*.java Menu/CommentHandler/*.java
 ```
 
+This command compiles all the Java files in the specified directories.
 
-### [TestCase.py](testcase.py)
-
+## Testing Instructions
+### Preparing for Test
 1. Ensure that the Java program (MainProgram) is correctly compiled and accessible.
-2. Prepare a file named Suggested_Inputs_For_Program_Testing.txt with the desired input scenarios.
-3. Run the Python script, and it will automate the execution of the Java program with the provided inputs.
+2. Prepare a file named `Suggested_Inputs_For_Program_Testing.txt` with the desired input scenarios.
 
+### Running the Test
+3. Run the following Python script to automate the execution of the Java program with the prepared inputs:
+
+```bash
+python TestCase.py
+```
+
+This script `TestCase.py` reads inputs from `Suggested_Inputs_For_Program_Testing.txt` and runs the Java program for each test case.
 
   ### [Test Cases](Suggested_Inputs_For_Program_Testing.txt)
 #### Staff A Workflow

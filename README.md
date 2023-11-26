@@ -1,18 +1,19 @@
 # SC2002_Group5-V2
 
 ### Compile code from the root directory
-```
+```bash
 javac Camp/*.java Comment/*.java Controller/*.java Menu/*.java Program/*.java Users/*.java Menu/CampHandlers/*.java Menu/CommentHandler/*.java
 ```
 
 
-### TestCase.py
+### [TestCase.py](Suggested_Inputs_For_Program_Testing.txt)
+
 1. Ensure that the Java program (MainProgram) is correctly compiled and accessible.
 2. Prepare a file named Suggested_Inputs_For_Program_Testing.txt with the desired input scenarios.
 3. Run the Python script, and it will automate the execution of the Java program with the provided inputs.
 
 
-  ### Suggested_Inputs_For_Program_Testing.txt
+  ### Test Cases
 #### Staff A Workflow
 
 1. **Create NTU and SCSE but dates clash:**

@@ -20,6 +20,8 @@ public class AdminMenu extends UserMenu {
      * @param allUser The collection of all users in the application.
      * @param allCamp The collection of all camps in the application.
      */
+
+    private static final String csvPath = "CSV_Input";
     public AdminMenu(AdminUser adminUser, AllUser allUser, AllCamp allCamp) {
         super(adminUser, allUser, allCamp);
     }
@@ -34,7 +36,7 @@ public class AdminMenu extends UserMenu {
         String selectedFile = null;
         int fileChoice = -1;
 
-        File dir = new File("./xlsxLISTfolder");
+        File dir = new File("./" + csvPath);
         File[] files = dir.listFiles((d, name) -> name.endsWith(".csv"));
         if (files.length == 0) {
             System.out.println("Error! No csv file found!");
@@ -62,7 +64,7 @@ public class AdminMenu extends UserMenu {
         }
         selectedFile = files[fileChoice - 1].getName();
         System.out.println("Selected file: " + selectedFile);
-        String filePath = "./xlsxLISTfolder/" + selectedFile;
+        String filePath = "./" + csvPath + "/" + selectedFile;
 
         do {
             System.out.printf("\nSelect type:\n(1)\tStaff\n(2)\tStudent\n" + //

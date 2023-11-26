@@ -6,6 +6,10 @@ import java.io.Serializable;
  * It provides methods to get a faculty type based on faculty name or user choice.
  */
 public class Faculty implements Serializable {
+    /**
+     * All the faculties in NTU, each student only associated to one Faculty.
+     * If a camp's faculty is set to UNIVERSE, meaning that the camp is open for students from any of the faculties.
+     */
     public static enum FACULTY_TYPE {
         SCSE, EEE, SSS, NBS, CCEB, CEE, MSE, MAE, ADM, SOH, WKWSCI, SBS, SPMS, ASE, LKC, NIE, UNIVERSE
     };

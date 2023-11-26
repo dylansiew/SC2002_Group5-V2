@@ -26,7 +26,7 @@ public abstract class CampComment  implements Serializable{
     }
     /**
      * Adds a comment to the list of comments associated with this `CampComment`.
-     * @param comment The Comment object to be added.
+     * @param comments The Comment object to be added.
      */
     public void addComment(Comment comments) {
         if (comments == null) {
@@ -36,7 +36,7 @@ public abstract class CampComment  implements Serializable{
     }
     /**
      * Removes a comment from the list of comments associated with this `CampComment`.
-     * @param comment The Comment object to be removed.
+     * @param comments The Comment object to be removed.
      */
     public void removeComment(Comment comments) {
         if (comments == null || !this.comments.contains(comments)) {

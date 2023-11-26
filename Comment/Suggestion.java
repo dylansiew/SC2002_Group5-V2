@@ -9,6 +9,9 @@ import Users.*;
  */
 public class Suggestion extends Comment {
     static int nextSuggestionId = 1;
+    /**
+     * The Suggestion's status can be either PENDING, APPROVED, or REJECTED
+     */ 
     public enum STATUS {
         APPROVED, REJECTED, PENDING
     }

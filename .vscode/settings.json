@@ -59,8 +59,6 @@
         "c:\\Users\\jolen\\Downloads\\poi-bin-5.2.3\\lib\\SparseBitSet-1.2.jar"
     ],
 
-    "files.exclude": {
-        "**/*.class": true
-    }
+
     
 }

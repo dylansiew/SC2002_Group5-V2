@@ -1,7 +1,7 @@
 # SC2002_Group5-V2
 
 ## Overview
-This README provides instructions for compiling and testing the Java program for SC2002_Group5-V2.
+This README provides instructions for compiling and testing the Java program for SC2002 Group5, a project developed as part of the SC2002 Object-Oriented Design & Programming course. The project involves the development of the Camp Application and Management System (CAMS).
 
 ## Compilation Instructions
 To compile the code, navigate to the root directory and execute the following commands in the terminal:

@@ -5,4 +5,4 @@
  * Additionally, this subpackage includes classes for creating, editing, and deleting camps, as well as viewing camp members and available camps.
  * The classes here facilitate the management of camps and user participation in them.
  */
-package Menu.CampHandler;
+package Menu.CampHandlers;

@@ -1,4 +1,4 @@
-package Menu.CampHandler;
+package Menu.CampHandlers;
 
 import Camp.CampCommittee;
 import Camp.CampInformation;

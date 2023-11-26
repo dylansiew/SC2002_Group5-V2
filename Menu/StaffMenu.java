@@ -2,7 +2,7 @@ package Menu;
 
 import Comment.CommentType;
 import Controller.*;
-import Menu.CampHandler.*;
+import Menu.CampHandlers.*;
 import Menu.CommentHandler.*;
 import Users.*;
 import Program.*;

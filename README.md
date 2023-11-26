@@ -7,7 +7,7 @@ This README provides instructions for compiling and testing the Java program for
 To compile the code, navigate to the root directory and execute the following commands in the terminal:
 
 ```bash
-javac Camp/*.java Comment/*.java Controller/*.java Menu/*.java Program/*.java Users/*.java Menu/CampHandlers/*.java Menu/CommentHandler/*.java
+javac Camp/*.java Comment/*.java Controller/*.java Menu/*.java Program/*.java Users/*.java Menu/CampHandlers/*.java Menu/CommentHandler/*.java Menu/CommentHandler/Interfaces/*.java
 ```
 
 This command compiles all the Java files in the specified directories.

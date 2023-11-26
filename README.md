@@ -18,7 +18,8 @@ This command compiles all the Java files in the specified directories.
 2. Prepare a file named `Suggested_Inputs_For_Program_Testing.txt` with the desired input scenarios.
 ### Manually test
 1. Ensure all the files are correctly compiled.
-2. ```bash
+2.
+```bash
 java Program/MainProgram.java
 ```
 3. login as admin to add users - username: admin, password: password

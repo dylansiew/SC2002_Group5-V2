@@ -44,9 +44,6 @@ public class MainProgram {
         AllUser allUser = mainObj.getAllUser();
         AllCamp allCamp = mainObj.getAllCamp();
 
-        allUser.printAllUser();
-        allCamp.printAllCamp();
-
         SerializationUtil.saveObj(mainObj, mainObj_filename);
 
         boolean runProgram = true;

@@ -21,12 +21,11 @@ public class Report {
 	/**
 	 * Specify the directory to store the report generated
 	 */
-
     private static final String REPORT_FOLDER = "Report_txt";
 
     /**
      * Generates report of a camp according to the filter (reportType) given from ReportMenu
-     * @param camp 
+     * @param camp camp object
      * @param reportType enum that used to filter the report type
      */
     public static void generateListReport(Camp camp, Roles.ROLES reportType) {

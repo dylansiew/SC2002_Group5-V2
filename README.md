@@ -26,9 +26,9 @@ python TestCase.py
 
 ## Test Instructions for manual test
 1. Ensure all the files are correctly compiled.
-2.
+2. Run the MainProgram class file located in the Program package
 ```bash
-java Program/MainProgram.java
+java Program/MainProgram
 ```
 3. login as admin to add users - username: admin, password: password
 4. Refer to `Suggested_Inputs_For_Program_Testing.txt` 

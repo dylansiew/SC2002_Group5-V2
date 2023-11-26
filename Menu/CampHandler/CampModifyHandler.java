@@ -7,15 +7,26 @@ import Users.*;
 import Users.Roles.ROLES;
 
 import java.util.*;
-
+/**
+ * The `CampModifyHandler` class is responsible for handling camp modification operations, such as creating new camps,
+ * editing existing camps, and deleting camps. It provides methods to create, edit, and delete camps, with various
+ * options for customization.
+ */
 public class CampModifyHandler extends CampBaseHandler {
     private CampDetailHandler campDetailHandler;
-
+    /**
+     * Initializes a new instance of the `CampModifyHandler` class with the specified `AllCamp` and `User` objects.
+     * @param allCamp The `AllCamp` object containing information about all camps.
+     * @param user    The `User` object representing the user interacting with camp-related operations.
+     */
     public CampModifyHandler(AllCamp allCamp, User user) {
         super(allCamp, user);
         campDetailHandler = new CampDetailHandler(allCamp, user);
     }
-
+    /**
+     * Creates a new camp based on user input and adds it to the system.
+     * This method is accessible to staff users.
+     */
     public void createCamp() {
         if (!(user instanceof Staff)) {
             return;
@@ -68,7 +79,10 @@ public class CampModifyHandler extends CampBaseHandler {
         staff.addCamp(newCamp);
         allCamp.addCamp(newCamp);
     }
-
+    /**
+     * Allows staff users to edit the details of an existing camp, such as its name, dates, location, and more.
+     * Users can choose which aspects of the camp to edit.
+     */
     public void editCamps() {
         if (!(user instanceof Staff)) {
             return;
@@ -198,7 +212,10 @@ public class CampModifyHandler extends CampBaseHandler {
         }
 
     }
-
+    /**
+     * Deletes an existing camp. Staff users can choose to delete a camp, but only if there are no students registered
+     * in the camp.
+     */
     public void deleteCamp() {
         if (!(user instanceof Staff)) {
             return;

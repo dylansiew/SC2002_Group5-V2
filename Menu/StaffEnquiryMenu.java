@@ -13,10 +13,17 @@ import Users.User;
 import Menu.CampHandler.CampSelectionBuilder;
 import Menu.CommentHandler.Interfaces.*;
 import Program.MainProgram;
-
+/**
+ * The `StaffEnquiryMenu` class represents a menu for staff members to manage and respond to enquiries within the Camp Management System.
+ * Staff members can view and reply to enquiries associated with camps they are responsible for.
+ */
 public class StaffEnquiryMenu extends CommentMenu {
     private AllCamp allCamp;
-
+    /**
+     * Initializes a new instance of the StaffEnquiryMenu class with the specified parameters.
+     * @param allCamp     The AllCamp instance associated with this menu.
+     * @param commentType The type of comments (e.g., enquiry) handled by this menu.
+     */
     public StaffEnquiryMenu(AllCamp allCamp, CommentType.COMMENTTYPES commentType) {
         super(allCamp, commentType);
     }
@@ -24,7 +31,11 @@ public class StaffEnquiryMenu extends CommentMenu {
     public AllCamp getAllCamp() {
         return this.allCamp;
     }
-
+    /**
+     * Select a camp based on user input.
+     * @param user The user making the selection.
+     * @return The selected camp.
+     */
     public Camp selectCamp(User user) {
         Staff staff = (Staff) user;
         ArrayList<Camp> campArrayList = staff.getCampsCreated();
@@ -35,7 +46,12 @@ public class StaffEnquiryMenu extends CommentMenu {
 
         return selectedCamp;
     }
-
+    /**
+     * Select an enquiry comment within a specific camp based on user input.
+     * @param camp The camp associated with the comments.
+     * @param user The user making the selection.
+     * @return The selected enquiry comment.
+     */
     protected Comment selectComment(Camp camp, User user) {
         if (camp == null) {
             return null;
@@ -82,7 +98,11 @@ public class StaffEnquiryMenu extends CommentMenu {
         }
         return null;
     }
-
+    /**
+     * View comments associated with a camp using the provided viewer.
+     * @param staff  The staff member viewing the comments.
+     * @param viewer The viewer for displaying comments.
+     */
     public void viewComment(Staff staff, IViewing viewer) {
         Camp selectedCamp = this.selectCamp(staff);
         if (selectedCamp == null) {
@@ -90,7 +110,11 @@ public class StaffEnquiryMenu extends CommentMenu {
         }
         viewer.viewComment(staff, selectedCamp);
     }
-
+    /**
+     * Reply to an enquiry comment using the provided replyer.
+     * @param staff   The staff member replying to the comment.
+     * @param replyer The replyer for responding to comments.
+     */
     public void replyComment(Staff staff, IReplying replyer) {
         Camp selectedCamp = this.selectCamp(staff);
         if (selectedCamp == null) {

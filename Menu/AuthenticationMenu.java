@@ -4,14 +4,28 @@ import java.util.*;
 import Controller.*;
 import Program.*;
 import Users.*;
-
+/**
+ * The `AuthenticationMenu` class represents a menu for user authentication and related actions.
+ * It is a subclass of `UserMenu` and provides login and password change functionality.
+ */
 public class AuthenticationMenu extends UserMenu {
+    /**
+     * Creates an `AuthenticationMenu` instance.
+     * @param user     The user for whom the menu is displayed.
+     * @param allUser  The collection of all users.
+     * @param allCamp  The collection of all camps.
+     */
     public AuthenticationMenu(User user, AllUser allUser, AllCamp allCamp) {
         super(user, allUser, allCamp);
     }
 
     public static final int MAX_RETRY = 3;
-
+    /**
+     * Displays the login menu and allows a user to log in.
+     *
+     * @param allUser The collection of all users.
+     * @return The logged-in user or null if login fails.
+     */
     public static User loginMenu(AllUser allUser) {
         int retry = MAX_RETRY;
 
@@ -49,7 +63,9 @@ public class AuthenticationMenu extends UserMenu {
             }
         }
     }
-
+    /**
+     * Displays the main menu for authenticated users.
+     */
     public void mainMenu() {
 
         String menuText = "\n(1)\tView profile\n(2)\tChange password\n(3)\tExit\nChoice: ";
@@ -69,7 +85,11 @@ public class AuthenticationMenu extends UserMenu {
             }
         }
     }
-
+    /**
+     * Displays the password change menu and allows the user to change their password.
+     *
+     * @param user The user whose password is being changed.
+     */
     private static void changePasswordMenu(User user) {
 
         while (true) {

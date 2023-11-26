@@ -7,8 +7,15 @@ import java.util.stream.Collectors;
 
 import Camp.*;
 import Program.*;
-
+/**
+ * The `CampSelectionBuilder` class provides utility methods for selecting and filtering camps.
+ */
 public class CampSelectionBuilder {
+    /**
+     * Selects a camp from the provided list of camps, optionally applying filters.
+     * @param campArrayList The list of camps to choose from.
+     * @return The selected camp or null if no camp is chosen.
+     */
     public static Camp selectCamp(ArrayList<Camp> campArrayList) {
         System.out.println("Would you like to filter camps?\nChoice(Y/N)");
         if (MainProgram.sc.nextLine().toLowerCase().equals("y")) {
@@ -42,7 +49,12 @@ public class CampSelectionBuilder {
             return targetCamp;
         }
     }
-
+    /**
+     * Creates a date filter predicate based on a start and end date.
+     * @param startDate The start date for the filter.
+     * @param endDate   The end date for the filter.
+     * @return A predicate that filters camps based on their event dates.
+     */
     public static Predicate<Camp> addDateFilter(Date startDate, Date endDate) {
         return new Predicate<Camp>() {
             public boolean test(Camp camp) {
@@ -51,7 +63,12 @@ public class CampSelectionBuilder {
             }
         };
     }
-
+    /**
+     * Creates a location filter predicate based on a list of locations.
+     *
+     * @param locations The list of locations to filter by.
+     * @return A predicate that filters camps based on their locations.
+     */
     public static Predicate<Camp> addLocationFilter(ArrayList<String> locations) {
         return new Predicate<Camp>() {
             public boolean test(Camp camp) {
@@ -60,7 +77,11 @@ public class CampSelectionBuilder {
             }
         };
     }
-
+    /**
+     * Applies filters to a list of camps based on user input.
+     * @param camps The list of camps to filter.
+     * @return The filtered list of camps.
+     */
     public static ArrayList<Camp> applyFilters(ArrayList<Camp> camps) {
         ArrayList<Predicate<Camp>> filters = new ArrayList<>();
 

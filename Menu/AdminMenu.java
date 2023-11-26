@@ -6,12 +6,28 @@ import Program.*;
 import Users.*;
 
 import java.io.File;
-
+/**
+ * The `AdminMenu` class represents the menu and functionality available to an administrator user.
+ * It is a subclass of the `UserMenu` class.
+ *
+ * This class allows administrators to select and add user profiles from CSV files to the application.
+ */
 public class AdminMenu extends UserMenu {
+    /**
+     * Constructs an `AdminMenu` object with the provided administrator user, all users, and all camps.
+     *
+     * @param adminUser The administrator user accessing the menu.
+     * @param allUser The collection of all users in the application.
+     * @param allCamp The collection of all camps in the application.
+     */
     public AdminMenu(AdminUser adminUser, AllUser allUser, AllCamp allCamp) {
         super(adminUser, allUser, allCamp);
     }
-
+    
+        
+    /**
+     * Displays the main menu for administrators, allowing them to select and add user profiles from CSV files.
+     */
     public void mainMenu() {
         System.out.println("\nList of file that can be added:");
         Integer profilechoice = -1;

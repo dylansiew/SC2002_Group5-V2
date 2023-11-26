@@ -8,8 +8,17 @@ import Users.*;
 import Camp.Camp;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
+/**
+ * The `StudentReplyEnquiry` class implements the `IReplying` interface and allows students to reply to enquiry comments made by other users within a camp.
+ * Students can provide replies to enquiries, and their replies will be recorded with a timestamp, the student's name, and the reply text.
+ */
 public class StudentReplyEnquiry implements IReplying {
+    /**
+     * Allows a student to reply to an enquiry comment made by another user within a camp.
+     * @param user    The student user replying to the enquiry.
+     * @param comment The comment (enquiry) to which the student is replying.
+     * @param camp    The camp within which the comment is being replied to.
+     */
     public void replyComment(User user, Comment comment, Camp camp) {
         Enquiry selectedEnquiry = (Enquiry) comment;
         Student student = (Student) user;

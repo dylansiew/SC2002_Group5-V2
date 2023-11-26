@@ -11,16 +11,29 @@ import Users.Student;
 import Users.User;
 import Menu.CommentHandler.Interfaces.*;
 import Program.MainProgram;
-
+/**
+ * The `StudentSuggestionMenu` class represents a menu for students to manage and interact with suggestion comments within the Camp Management System.
+ * Students can view, add, edit, and delete their own suggestion comments for their respective camps.
+ */
 public class StudentSuggestionMenu extends CommentMenu {
+    /**
+     * Initializes a new instance of the StudentSuggestionMenu class with the specified parameters.
+     * @param allCamp     The AllCamp instance associated with this menu.
+     * @param commentType The type of comments (e.g., suggestion) handled by this menu.
+     */
     public StudentSuggestionMenu(AllCamp allCamp, CommentType.COMMENTTYPES commentType) {
         super(allCamp, commentType);
     }
-
+    
     public AllCamp getAllCamp() {
         return this.allCamp;
     }
-
+        
+    /**
+     * Select a camp based on user input.
+     * @param user The user making the selection.
+     * @return The selected camp.
+     */
     protected Camp selectCamp(User user) {
         Student student = (Student) user;
         if (student == null) {
@@ -32,7 +45,12 @@ public class StudentSuggestionMenu extends CommentMenu {
         }
         return committee.getCamp();
     }
-
+    /**
+     * Select a suggestion comment within a specific camp based on user input.
+     * @param camp The camp associated with the comments.
+     * @param user The user making the selection.
+     * @return The selected suggestion comment.
+     */
     protected Comment selectComment(Camp camp, User user) {
 
         if (camp == null) {
@@ -76,19 +94,31 @@ public class StudentSuggestionMenu extends CommentMenu {
 
         return targetComment;
     }
-
+    /**
+     * Add a suggestion comment using the provided adder.
+     * @param student The student adding the suggestion comment.
+     * @param adder   The adder for adding comments.
+     */
     public void addComment(Student student, IAdding adder) {
         Camp camp = this.selectCamp(student);
         adder.addComment(student, camp);
         return;
     }
-
+    /**
+     * View comments associated with a camp using the provided viewer.
+     * @param student The student viewing the comments.
+     * @param viewer  The viewer for displaying comments.
+     */
     public void viewComment(Student student, IViewing viewer) {
         Camp targetCamp = this.selectCamp(student);
         viewer.viewComment(student, targetCamp);
         return;
     }
-
+    /**
+     * Edit a suggestion comment using the provided editor.
+     * @param student The student editing the suggestion comment.
+     * @param editor  The editor for editing comments.
+     */
     public void editComment(Student student, IEditing editor) {
         if (student == null) {
             return;
@@ -104,7 +134,11 @@ public class StudentSuggestionMenu extends CommentMenu {
         editor.editComment(student, selectedComment);
         return;
     }
-
+    /**
+     * Delete a suggestion comment using the provided deleter.
+     * @param student The student deleting the suggestion comment.
+     * @param deleter The deleter for deleting comments.
+     */
     public void deleteComment(Student student, IDeleting deleter) {
         if (student == null) {
             return;

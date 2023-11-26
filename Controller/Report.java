@@ -11,10 +11,24 @@ import Users.*;
 import Comment.Enquiry;
 import Comment.CommentType.COMMENTTYPES;
 
+/**
+ * The `Report` class generates a report for the specified camp.
+ * It generates different types of report based on user's perference
+ */
+
 public class Report {
+	
+	/**
+	 * Specify the directory to store the report generated
+	 */
 
     private static final String REPORT_FOLDER = "Report_txt";
 
+    /**
+     * Generates report of a camp according to the filter (reportType) given from ReportMenu
+     * @param camp 
+     * @param reportType enum that used to filter the report type
+     */
     public static void generateListReport(Camp camp, Roles.ROLES reportType) {
         if (camp == null || reportType == null) {
             return;
@@ -47,6 +61,11 @@ public class Report {
         }
 
     }
+    
+    /**
+     * Generate committee performance report
+     * @param camp 
+     */
 
     public static void generatePerformanceReport(Camp camp) {
         if (camp == null) {
@@ -84,7 +103,11 @@ public class Report {
             System.out.println("An error occurred while writing the report: " + e.getMessage());
         }
     }
-
+    
+    /**
+     * Generates student enquiry report
+     * @param camp camp object
+     */
     public static void generateStudentEnquiryReport(Camp camp) {
         if (camp == null) {
             return;

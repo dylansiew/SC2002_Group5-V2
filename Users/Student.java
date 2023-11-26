@@ -2,18 +2,31 @@ package Users;
 
 import java.util.*;
 import Camp.*;
-
+/**
+ * The `Student` class represents a student user in the system.
+ * Students have the ability to register for and manage their participation in camps.
+ */
 public class Student extends User {
     Committee studentCommittee;
     Attendee studentAttendee;
     BusyDate busyDate = new BusyDate();
-
+     /**
+     * Creates a new student with the specified name, email, and faculty.
+     * @param name    The name of the student.
+     * @param email   The email of the student.
+     * @param faculty The faculty to which the student belongs.
+     */
     public Student(String name, String email, Faculty.FACULTY_TYPE faculty) {
         super(name, email, faculty);
         this.id = User.nextStudentId;
         User.nextStudentId += 1;
     }
-
+    /**
+     * Registers the student for a camp, either as an attendee or committee member.
+     * @param camp     The camp to be registered for.
+     * @param attendee `true` if registering as an attendee, `false` for committee member.
+     * @return `true` if registration is successful, `false` otherwise.
+     */
     public boolean registerCamp(Camp camp, boolean attendee) {
         if (camp == null) {
             return false;
@@ -56,7 +69,10 @@ public class Student extends User {
         }
         return false;
     }
-
+    /**
+     * Withdraws the student from an attendee camp.
+     * @param camp The camp to withdraw from.
+     */
     public void withdrawAttendeeCamp(Camp camp) {
         if (camp == null) {
             return;

@@ -1,8 +1,5 @@
 # SC2002_Group5-V2
 
-
-# SC2002_Group5-V2
-
 ## Overview
 This README provides instructions for compiling and testing the Java program for SC2002_Group5-V2.
 
@@ -29,7 +26,7 @@ python TestCase.py
 
 This script `TestCase.py` reads inputs from `Suggested_Inputs_For_Program_Testing.txt` and runs the Java program for each test case.
 
-  ### [Test Cases](Suggested_Inputs_For_Program_Testing.txt)
+### [Test Cases](Suggested_Inputs_For_Program_Testing.txt)
 #### Staff A Workflow
 
 1. **Create NTU and SCSE but dates clash:**

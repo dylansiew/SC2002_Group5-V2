@@ -7,7 +7,7 @@ file_to_delete = 'mainObj.ser'
 if os.path.exists(file_to_delete):
     os.remove(file_to_delete)
 else:
-    print("The file does not exist and cannot be deleted.")
+    print("The file (" +file_to_delete + ") does not exist and cannot be deleted.")
 
 java_program_path = 'Program.MainProgram'
 
@@ -20,6 +20,8 @@ process = subprocess.Popen(['java', java_program_path], stdin=subprocess.PIPE, t
 prev = ""
 for line in inputs:
     process.stdin.write(line + '\n')
+    print(prev)
+    prev = line
     time.sleep(1)
     process.stdin.flush()
 

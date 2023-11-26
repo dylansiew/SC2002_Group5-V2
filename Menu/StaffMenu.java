@@ -2,11 +2,14 @@ package Menu;
 
 import Comment.CommentType;
 import Controller.*;
-import Menu.CampHandler.*;
+import Menu.CampHandlers.*;
 import Menu.CommentHandler.*;
 import Users.*;
 import Program.*;
-
+/**
+ * The `StaffMenu` class represents the menu for staff members.
+ * It provides options for staff members to perform various actions related to camps, comments, and reports.
+ */
 public class StaffMenu extends UserMenu {
     StaffSuggestionMenu suggestionMenu;
     StaffEnquiryMenu enquiryMenu;

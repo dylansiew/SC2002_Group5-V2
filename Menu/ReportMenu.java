@@ -2,7 +2,7 @@ package Menu;
 
 import Camp.*;
 import Controller.*;
-import Menu.CampHandler.CampSelectionBuilder;
+import Menu.CampHandlers.CampSelectionBuilder;
 import Program.MainProgram;
 import Users.*;
 /**

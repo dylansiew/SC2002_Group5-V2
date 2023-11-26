@@ -57,7 +57,7 @@ public class SerializationUtil {
     }
 
     /** Load the {@code mainObj} before running the main application
-     * @param filepath the path to {@code mainObj}. It is {@code mainObj.ser} in this application
+     * @param filePath the path to {@code mainObj}. It is {@code mainObj.ser} in this application
     */
     public static MainObj loadMainObj(String filePath) {
         File myObj = new File(filePath);

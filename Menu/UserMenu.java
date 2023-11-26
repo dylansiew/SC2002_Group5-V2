@@ -2,7 +2,7 @@ package Menu;
 
 import Controller.AllCamp;
 import Controller.AllUser;
-import Menu.CampHandler.CampHandler;
+import Menu.CampHandlers.CampHandler;
 import Users.User;
 /**
  * The `UserMenu` abstract class represents a menu for a user with common functionalities.

@@ -16,14 +16,6 @@ This command compiles all the Java files in the specified directories.
 ### Preparing for Test
 1. Ensure that the Java program (MainProgram) is correctly compiled and accessible.
 2. Prepare a file named `Suggested_Inputs_For_Program_Testing.txt` with the desired input scenarios.
-### Manually test
-1. Ensure all the files are correctly compiled.
-2.
-```bash
-java Program/MainProgram.java
-```
-3. login as admin to add users - username: admin, password: password
-4. Refer to `Suggested_Inputs_For_Program_Testing.txt` 
 
 ### Running the Test
 3. Run the following Python script to automate the execution of the Java program with the prepared inputs:
@@ -31,6 +23,15 @@ java Program/MainProgram.java
 ```bash
 python TestCase.py
 ```
+
+### Test Instructions for manual test
+1. Ensure all the files are correctly compiled.
+2.
+```bash
+java Program/MainProgram.java
+```
+3. login as admin to add users - username: admin, password: password
+4. Refer to `Suggested_Inputs_For_Program_Testing.txt` 
 
 This script `TestCase.py` reads inputs from `Suggested_Inputs_For_Program_Testing.txt` and runs the Java program for each test case.
 

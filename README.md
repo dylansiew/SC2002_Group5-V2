@@ -24,7 +24,7 @@ This command compiles all the Java files in the specified directories.
 python TestCase.py
 ```
 
-### Test Instructions for manual test
+## Test Instructions for manual test
 1. Ensure all the files are correctly compiled.
 2.
 ```bash

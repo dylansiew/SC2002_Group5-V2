@@ -2,14 +2,13 @@ NAME: NTU Ori
 Start Date: Wed May 22 00:00:00 SGT 2024
 End Date: Fri May 24 00:00:00 SGT 2024
 Registration deadline: Fri May 10 00:00:00 SGT 2024
-LOCATION: North Spine
+LOCATION: NS
 Faculties (1):
 1. UNIVERSE
 DESCRIPTION: Ori
 Organiser: ALEXEI
-Remaining committee slots: 1
-Remaining total slots: 2
-COMMITTEE (3):
+Remaining committee slots: 2
+Remaining total slots: 7
+COMMITTEE (2):
 1:	User: Student | ID: 200 | Name: CHERN | Email: YCHERN@E.NTU.EDU.SG | Faculty: SCSE
 2:	User: Student | ID: 205 | Name: DENISE | Email: DL007@E.NTU.EDU.SG | Faculty: SCSE
-3:	User: Student | ID: 208 | Name: LEE | Email: LE51@E.NTU.EDU.SG | Faculty: SCSE

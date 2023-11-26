@@ -5,8 +5,7 @@ import java.util.*;
 import Users.*;
 
 /**
- * `AllCamp` stores the collection of all camps.
- *  It can only be instantiate once
+ * `AllUser` stores the collection of all users. It can only be instantiate once
  */
 public class AllUser implements Serializable {
     /** An array to store all of the users */

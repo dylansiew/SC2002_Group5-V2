@@ -7,10 +7,8 @@ import Camp.*;
 import Users.*;
 
 /**
- * `AllCamp` stores the collection of all camps.
- *  It can only be instantiate once
+ * `AllCamp` stores the collection of all camps. It can only be instantiate once
  */
-
 public class AllCamp implements Serializable {
     private static AllCamp instance;
     private ArrayList<Camp> allCamp = new ArrayList<>();

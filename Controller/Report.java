@@ -21,7 +21,7 @@ public class Report {
 	/**
 	 * Specify the directory to store the report generated
 	 */
-    private static final String REPORT_FOLDER = "Report_txt";
+    private static final String REPORT_FOLDER = "Report_Output";
 
     /**
      * Generates report of a camp according to the filter (reportType) given from ReportMenu
